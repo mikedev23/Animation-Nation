@@ -6,10 +6,7 @@ body {
   background: url(https://images.pexels.com/photos/176851/pexels-photo-176851.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2);
   background-repeat: no-repeat;
   background-size: 100% 100%;
-  box-sizing: border-box;
-  display: flex;
-  align-items: row;
-  justify-content: center;
+  margin: 0;
 }
 
 .container {
@@ -19,13 +16,32 @@ body {
   height: 100vh;
 }
 
+h1 {
+  color: lawngreen;
+  font: italic;
+  size: bold;
+  animation-name: spin;
+  animation-duration: 7000ms;
+  animation-iteration-count: infinite;
+  animation-timing-function: linear;
+}
+
+@keyframes spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
 .red {
-  width: 6em;
-  height: 6em;
+  width: 7em;
+  height: 7em;
   background-color: red;
   border-radius: 50%;
   margin: 2em;
-  animation: 1s ease s infinite beat;
+  animation: 1s ease 0s infinite beat;
 }
 
 @keyframes beat {
@@ -79,8 +95,8 @@ body {
 }
 
 .blue {
-  width: 6em;
-  height: 6em;
+  width: 7em;
+  height: 7em;
   background-color: blue;
   border-radius: 50%;
   margin: 2em;
